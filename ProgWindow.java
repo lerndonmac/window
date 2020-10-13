@@ -25,24 +25,14 @@ public class ProgWindow extends Application {
         past.setLayoutX(0);
         past.setFont(new Font(20));
         past.setPrefSize(80,20);
-        past.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent actionEvent) {
-                    txtText.appendText(buf);
-            }
-        });
+        past.setOnAction(event -> {txtText.appendText(buf);});
 
         var copy = new Button("Copy");
         copy.setLayoutX(80);
         copy.setLayoutY(200);
         copy.setFont( new Font(20));
         copy.setPrefSize(80,20);
-        copy.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent actionEvent) {
-                buf = txtText.getText();
-            }
-        });
+        copy.setOnAction(event -> {buf = txtText.getText();});
 
         var cut = new Button("cut");
         cut.setLayoutY(200);
